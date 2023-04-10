@@ -1,0 +1,67 @@
+﻿<Page x:Class="birdsProject.pages.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        FontSize="18" FontFamily="{DynamicResource MaterialDesignFont}"
+        Background="Transparent" 
+        mc:Ignorable="d" Height="645" Width="875">
+
+    <Grid Margin="20">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="30" ShadowDepth="1" Opacity="0.4"/>
+        </Grid.Effect>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.22*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Left Section-->
+        <Border Background="#07BF96" CornerRadius="10 0 0 10" ClipToBounds="True">
+
+            <Border.Clip>
+                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,605"/>
+            </Border.Clip>
+
+            <Grid>
+                <Image  Source="/backround.jpg" Height="1200" Width="845"></Image>
+                <!--Title-->
+                <StackPanel Margin="0 120 0 0" VerticalAlignment="Top">
+                    <TextBlock Text="Sign up" FontSize="46" FontWeight="Light" Foreground="#ffffff" TextAlignment="Center"/>
+                    <TextBlock Text="to use all features" FontWeight="Light" FontSize="16" Foreground="#D1F2EB" TextAlignment="Center" Margin="0 15 0 3"/>
+                    <TextBlock Text="of the application" FontWeight="Light" FontSize="16" Foreground="#D1F2EB" TextAlignment="Center"/>
+                    <TextBlock Text="instructions for sign in" FontWeight="Bold"  FontSize="25" Foreground="#D1F2EB" TextAlignment="Center" Margin="0 40 0 3"/>
+                    <TextBlock Text="type valid id (only numbers and by length of 9)." FontWeight="Bold"  FontSize="14" Foreground="#D1F2EB" TextAlignment="Center" Margin="0 10 0 3"/>
+                    <TextBlock Text="type valid password length between 8 to 10" FontWeight="Bold"  FontSize="14" Foreground="#D1F2EB" TextAlignment="Center" Margin="0 5 0 3"/>
+                    <TextBlock Text=" and contains at least one letter, one digit and one symbol." FontWeight="Bold"  FontSize="14" Foreground="#D1F2EB" TextAlignment="Center" Margin="0 0 0 3"/>
+                    <TextBlock Text="type valid username (only letters and digits, the length is" FontWeight="Bold"  FontSize="14" Foreground="#D1F2EB" TextAlignment="Center" Margin="0 5 0 3"/>
+                    <TextBlock Text="between 6 to 8 and contains at most 2 digits)" FontWeight="Bold"  FontSize="14" Foreground="#D1F2EB" TextAlignment="Center" Margin="0 0 0 3"/>
+
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <!--Right Section-->
+        <Border Grid.Column="1" Background="#ffffff" CornerRadius="0 10 10 0" MouseDown="Border_MouseDown">
+            <Grid>
+                <!--Close Icon-->
+                <!--Inputs-->
+                <StackPanel VerticalAlignment="Center" Margin="75 0">
+                    <TextBox Name ="username" BorderThickness="0 0 0 1.5" BorderBrush="#C5C8CC" materialDesign:HintAssist.FloatingOffset="0,-20" materialDesign:HintAssist.Hint="Username" Text="John.Doe_am" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Name ="id" BorderThickness="0 0 0 1.5" BorderBrush="#C5C8CC" materialDesign:HintAssist.FloatingOffset="0,-20" materialDesign:HintAssist.Hint="Id" Text="319065413" Margin="0 27 0 27" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <PasswordBox Name ="password" BorderThickness="0 0 0 1.5" BorderBrush="#C5C8CC" materialDesign:HintAssist.FloatingOffset="0,-18" materialDesign:HintAssist.Hint="Password" Password="1234567890" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                   
+
+                    <StackPanel Orientation="Horizontal" Margin="20">
+                        <Button Content="Sign up" Background="#05B790" Foreground="#ffffff" FontSize="18" materialDesign:ButtonAssist.CornerRadius="22" Height="45" Width="120"  Click="signUpRequest"/>
+                        <Button Content="or Login" materialDesign:ButtonAssist.CornerRadius="22" FontSize="16" Height="45" Width="120" Margin="5 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="Button_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>
