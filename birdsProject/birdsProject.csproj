@@ -84,11 +84,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="pages\addBird.xaml.cs">
+      <DependentUpon>addBird.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\addCage.xaml.cs">
+      <DependentUpon>addCage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\Homepage.xaml.cs">
       <DependentUpon>Homepage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\searchBird.xaml.cs">
+      <DependentUpon>searchBird.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\searchCage.xaml.cs">
+      <DependentUpon>searchCage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
@@ -105,11 +117,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\addBird.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\addCage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\Homepage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\searchBird.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\searchCage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
