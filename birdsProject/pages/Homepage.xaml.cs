@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using SpreadsheetLight;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,30 @@ namespace birdsProject.pages
         public Homepage()
         {
             InitializeComponent();
+        }
+        public bool IsDarkTheme { get; set; }
+        public object NavigationService { get; private set; }
+
+        private readonly PaletteHelper paletteHelper = new PaletteHelper();
+        //===================================>
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+        }
+
+        private void exitApp(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        private void GoToAnotherPage(object sender, RoutedEventArgs e)
+        {
+            _NavigationFrame.Navigate(new Uri("/pages/SignUp.xaml", UriKind.Relative));
+        }
+        private void logInRequest(object sender, RoutedEventArgs e)
+        {
+
+
         }
     }
 }
