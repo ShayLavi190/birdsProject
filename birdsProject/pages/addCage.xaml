@@ -15,14 +15,14 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="1.22*"/>
+            <ColumnDefinition Width="1.10*"/>
         </Grid.ColumnDefinitions>
 
         <!--Left Section-->
         <Border Background="#07BF96" CornerRadius="10 0 0 10" ClipToBounds="True">
 
             <Border.Clip>
-                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,800"/>
+                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,1500,1500"/>
             </Border.Clip>
 
             <Grid>

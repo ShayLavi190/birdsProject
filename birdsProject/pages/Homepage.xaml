@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="850" Width="875"
+        mc:Ignorable="d" Height="1200" Width="900"
         Title="Homepage">
     <Grid>
         <Image Source="bb.jpg" Stretch="UniformToFill" />
@@ -26,8 +26,8 @@
 
                     <Button Margin="0,20,0,0" x:Name="addCage" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Add bird" Click="addBirdr">
                     </Button>
-                    <Button  Margin="0,20,0,0" x:Name="searchBird" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Search bird" Click="addCager"></Button>
-                    <Button  Margin="0,20,0,0" x:Name="searchCage" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Search cage" Click="searchC"></Button>
+                    <Button  Margin="0,20,0,0" x:Name="searchBird" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Search bird" Click="searchBirdr"></Button>
+                    <Button  Margin="0,20,0,0" x:Name="searchCage" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Search cage" Click="searchCager"></Button>
 
                     <Button  Margin="0,20,0,0" x:Name="Logout" Style="{StaticResource MaterialDesignFlatLightBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Log out" Click="Logoutr"></Button>
 

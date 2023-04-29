@@ -24,10 +24,10 @@ namespace birdsProject.pages
     public class Cell
     {
             public string id;
-            private string Length;
-            private string Hight;
-            private string Width;
-            private string Matirial;
+            public string Length;
+            public string Hight;
+            public string Width;
+            public string Matirial;
         public Cell(string idt, string Lengtht, string Hightt, string Widtht, string Matirialt)
         {
             this.id = idt;
@@ -50,9 +50,9 @@ namespace birdsProject.pages
         {
             InitializeComponent();
         }
-        private void Back(object sender, RoutedEventArgs e)
+        private void Backreq(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("pages/Page1.xaml", UriKind.Relative));
+           NavigationService.Navigate(new Uri("pages/Page1.xaml", UriKind.Relative));
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -113,8 +113,9 @@ namespace birdsProject.pages
                         cell = doc.GetCellValueAsString("A" + index);
                     }
                     Array.Sort(matchingCells, new CellIdComparer());
+                    cageTable page1 = new cageTable(matchingCells);
+                    NavigationService.Navigate(page1);
                     doc.Save();
-                    MessageBox.Show("Cage added", "", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else

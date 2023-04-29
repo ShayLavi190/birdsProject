@@ -56,9 +56,13 @@ namespace birdsProject.pages
         {
             _NavigationFrame.Navigate(new Uri("pages/addBird.xaml", UriKind.Relative));
         }
-        private void searchC(object sender, RoutedEventArgs e)
+        private void searchBirdr(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/pages/searchCage.xaml", UriKind.Relative));
+            _NavigationFrame.Navigate(new Uri("pages/searchBird.xaml", UriKind.Relative));
+        }
+        private void searchCager(object sender, RoutedEventArgs e)
+        {
+            _NavigationFrame.Navigate(new Uri("pages/searchCage.xaml", UriKind.Relative));
         }
         private void Logoutr(object sender, RoutedEventArgs e)
         {
