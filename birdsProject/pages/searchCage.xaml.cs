@@ -64,12 +64,22 @@ namespace birdsProject.pages
         private void SearchCage(object sender, RoutedEventArgs e)
         {
             string Id = id.Text;
+            string Matirial;
             string Length = length.Text;
             string Hight = hight.Text;
             string Width = width.Text;
             string[] matirials = { "Wood","Plastic","Steel" };
             int matirialindex = material.SelectedIndex;
-            string Matirial = matirials[matirialindex];
+            if (matirialindex == -1)
+            {
+                Matirial = "-1";
+
+            }
+            else
+            {
+                Matirial = matirials[matirialindex];
+
+            }
             int num;
             int index = 2;
             if ((int.Parse(Id) > 0) && (int.Parse(Length) > 0) && (int.Parse(Hight) > 0) && (int.Parse(Width) > 0) && (cageIsFound(Id, 'A')))

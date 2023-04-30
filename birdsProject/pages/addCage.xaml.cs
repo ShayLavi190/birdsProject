@@ -35,10 +35,20 @@ namespace birdsProject.pages
             string Width = width.Text;
             string[] matirials= {"wood","steel","plastic"};
             int matirialindex = material.SelectedIndex;
-            string Matirial = matirials[matirialindex];
+            string Matirial;
+            if (matirialindex == -1)
+            {
+                Matirial = "-1";
+
+            }
+            else
+            {
+                Matirial = matirials[matirialindex];
+
+            }
             int num;
             int index = 2;
-            if ((int.Parse(Id) > 0) && (int.Parse(Length) > 0 ) && (int.Parse(Hight) > 0) && (int.Parse(Width) > 0) && (!cageIsFound(Id,'A')))
+            if ((int.Parse(Id) > 0) && (int.Parse(Length) > 0 ) && (int.Parse(Hight) > 0) && (int.Parse(Width) > 0) && (!cageIsFound(Id,'A')) && (Matirial!="-1"))
             {
                 if ((!(int.TryParse(Id, out num))) || (!(int.TryParse(Length, out num)))|| (!(int.TryParse(Hight, out num))) || (!(int.TryParse(Width, out num))))
                 {

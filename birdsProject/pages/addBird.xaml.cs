@@ -12,6 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -49,15 +50,33 @@ namespace birdsProject.pages
             string[] birdSpeciesarray = { "Blue", "Goldian", "Straberry", "Zebra", "Saffron" };
             string Id = id.Text;
             int birdSpecieindex = birdSpecie.SelectedIndex;
-            string birdSpeciec = birdSpeciesarray[birdSpecieindex];
+            string birdSpeciec;
+            if (-1 == birdSpecieindex)
+            {
+                birdSpeciec = "-1";
+            }
+            else
+            {
+                birdSpeciec = birdSpeciesarray[birdSpecieindex];
+
+            }
             string subspeciec = subspecie.Text;
             string birthDatec = birthDate.Text;
             int sexIndex = sex.SelectedIndex;
-            string sexc = sexarray[sexIndex];
+            string sexc;
+            if (-1 == sexIndex)
+            {
+                sexc = "-1";
+            }
+            else
+            {
+                 sexc = sexarray[sexIndex];
+
+            }
             string cageIdc = cageId.Text;
             string fatherIdc = fatherId.Text;
             string motherIdc = motherId.Text;
-            if((Id.Length == 8) && (subspeciec == "pink") && (cageIdc.Length == 8) && (fatherIdc.Length == 8) && (motherIdc.Length == 8) && (cageIsFound(cageIdc,'A')) && (IsFound(fatherIdc,'A')) && (IsFound(motherIdc, 'A')) && (!IsFound(Id,'A')))
+            if((Id.Length == 8) && (subspeciec == "pink") && (cageIdc.Length == 8) && (fatherIdc.Length == 8) && (motherIdc.Length == 8) && (cageIsFound(cageIdc,'A')) && (IsFound(fatherIdc,'A')) && (IsFound(motherIdc, 'A')) && (!IsFound(Id,'A')) && (sexc!="-1") && (birdSpeciec!="-1"))
             {
                 SLDocument doc = new SLDocument(@"C:\Users\Shay\Desktop\birdsProject\birdsProject\Data.xlsx");
                 doc.SelectWorksheet("Birds");

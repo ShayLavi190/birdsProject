@@ -72,12 +72,32 @@ namespace birdsProject.pages
             string Id = id.Text;
             string[] birdtype = { "Blue", "Goldian", "Straberry", "Zebra", "Saffron" };
             int birdSpecieindex = birdSpecie.SelectedIndex;
-            string BirdType = birdtype[birdSpecieindex];
+            string BirdType;
+            string sexType;
+            if (birdSpecieindex == -1)
+            {
+                 BirdType = "-1";
+
+            }
+            else
+            {
+                 BirdType = birdtype[birdSpecieindex];
+
+            }
             string Subspecie = subspecie.Text;
             string BirthDate = birthDate.Text;
             string[] sexTypeArr = { "Male", "Female" };
             int sexindex = sex.SelectedIndex;
-            string sexType = sexTypeArr[sexindex];
+            if (sexindex == -1)
+            {
+                 sexType = "-1";
+
+            }
+            else
+            {
+                 sexType = sexTypeArr[sexindex];
+
+            }
             string CageId = cageId.Text;
             string FatherId = fatherId.Text;
             string MotherId = motherId.Text;
